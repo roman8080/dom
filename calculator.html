@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background-image: url(https://www.shutterstock.com/image-photo/office-leather-desk-table-calculator-600nw-516570586.jpg);
+            background-size: cover;
+        }
+        .body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            gap: 1rem;
+
+        }
+        input {
+            padding: 0.5rem;
+        }
+        button {
+            padding: 0.5rem;
+        }
+        select {
+            padding: 0.2rem;
+        }
+        h1 {
+            color: ivory;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="body">
+    <input type="number" id="num1" />
+    
+    <select name="operator" id="operator">
+      <option value="+">+</option>
+      <option value="-">-</option>
+      <option value="*">*</option>
+      <option value="/">/</option>
+    </select>
+    <input type="number" id="num2" />
+    <button onclick="calculator()">Calculator</button>
+</div>
+    <script>
+        const num1 = document.getElementById('num1');
+        const num2 = document.getElementById('num2');
+        const result = document.querySelector('.body');
+        const operator = document.getElementById('operator');
+
+        function calculator(){
+            const h1 = document.createElement('h1')
+            if(operator.value == '+') {
+                h1.textContent = num1.value + operator.value + num2.value + '=' + (Number(num1.value) + Number(num2.value));
+            }
+            else if(operator.value == '-') {
+                h1.textContent = num1.value + operator.value + num2.value + '=' + (Number(num1.value) - Number(num2.value));
+            }
+            else if(operator.value == '*') {
+                h1.textContent = num1.value + operator.value + num2.value + '=' + (Number(num1.value) * Number(num2.value));
+            }
+            else if(operator.value == '/') {
+                h1.textContent = num1.value + operator.value + num2.value + '=' + (Number(num1.value) / Number(num2.value));
+            }
+            result.appendChild(h1);
+        }
+
+
+
+
+
+    </script>
+  </body>
+</html>

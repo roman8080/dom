@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+    <style>
+        input {
+            border-radius: 10px;
+            padding: 10px;
+        }
+        button {
+            border-radius: 10px;
+            padding: 5px;
+            color: black;
+            background-color: white;
+        }
+        h1 {
+            font-size: 100px;
+        }
+        .tt {
+            font-size: 50px;
+        }
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            padding: 10px;
+            background-image: url(https://img.freepik.com/premium-photo/headset-telephone-office-service-support_42708-206.jpg);
+            background-size: cover;
+        }
+    </style>
+  </head>
+  <body>
+  <h1>Call Center</h1>
+    <input id="phone" type="text" placeholder="Phone number" />
+    <input type="text" id="name" placeholder="Name" />
+    <input type="text" id="pp" placeholder="Emergency 911">
+
+    <div class="container">
+      <h1 class="tt"></h1>
+      <h1 class="pp"></h1>
+    </div>
+
+    <button onclick="check()">check</button>
+
+    <script>
+     const input = document.querySelector('#phone');
+     const input2 = document.querySelector('#name');
+     const h1 = document.querySelector('h1');
+     const container = document.querySelector('.container');
+     const h2 = document.createElement('h1');
+     const input3 = document.querySelector('#pp');
+     const emergecyText = document.querySelector(".pp")
+     container.appendChild(h2);
+
+     function check() {
+        h1.textContent = input.value;
+        h2.textContent = input2.value;
+        h2.style.color = 'black'
+        h2.style.backgroundColor = ''
+        h1.style.backgroundColor = ''
+        h2.classList.add('tt')
+        emergecyText.textContent = input3.value
+        
+
+
+     }
+
+    </script>
+  </body>
+</html>

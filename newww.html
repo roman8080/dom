@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+    <style>
+      body {
+        display: flex;
+        background-image: url(https://t4.ftcdn.net/jpg/09/29/35/93/360_F_929359382_rMIh3X9tgjM4NkuWy7CUPnqEkaKxMLGd.jpg);
+        justify-content: center;
+        flex-direction: column;
+        height: 100vh;
+        gap: 1rem;
+        overflow: hidden;
+        background-size: cover;
+      }
+      div {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        overflow: scroll;
+      }
+      .info {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding-left: 10rem;
+      }
+      .info h1 {
+        padding-left: 0.5rem;
+        color: antiquewhite;
+      }
+
+      .interrior {
+        display: flex;
+        padding: 5rem;
+        gap: 5rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="car"></div>
+    <div class="info">
+      <div class="interrior">
+        <img
+          src="https://cut-images.roadster.com/evox/color_640_001_png/55222/55222_cc640_001_300.png"
+          width="300"
+          alt=""
+        />
+        <img
+          src="https://cache.bmwusa.com/cosy.arox?pov=walkaround&brand=WBBM&vehicle=255E&client=byo&paint=P0300&fabric=FKTSW&sa=S02TE,S0302,S0316,S0319,S0322,S03GB,S03M1,S0402,S043L,S0459,S0494,S04FL,S04UR,S05AS,S05DM,S0674,S06AC,S06AK,S06C4,S06NX,S0704,S0710,S0760,S0775,S09T1,S09T2,S09TA&quality=70&bkgnd=transparent&resp=png&angle=220&w=9800&h=8000&x=100&y=1100"
+          width="300"
+          alt=""
+        />
+        <img
+          src="https://cache.bmwusa.com/cosy.arox?pov=walkaround&brand=WBBM&vehicle=255E&client=byo&paint=P0300&fabric=FKTSW&sa=S02TE,S0302,S0316,S0319,S0322,S03GB,S03M1,S0402,S043L,S0459,S0494,S04FL,S04UR,S05AS,S05DM,S0674,S06AC,S06AK,S06C4,S06NX,S0704,S0710,S0760,S0775,S09T1,S09T2,S09TA&quality=70&bkgnd=transparent&resp=png&angle=270&w=9800&h=8000&x=100&y=900"
+          width="300"
+          alt=""
+        />
+        <img src="" alt="" />
+      </div>
+    </div>
+
+    <script>
+      const div = document.querySelector(".car");
+      const info = document.querySelector(".info");
+
+      let cars = [
+        {
+          car: "https://cache.bmwusa.com/cosy.arox?pov=walkaround&brand=WBBM&vehicle=258L&client=byo&paint=P0300&fabric=FLKSW&sa=S01MA,S01TH,S0302,S0319,S0322,S03MF,S0415,S0416,S0453,S04GQ,S04HB,S04MC,S04NB,S05AC,S05AZ,S06AC,S06AK,S06C4,S06NW,S06U3,S06WD,S0712,S0760,S0776,S07M9,S07MA&quality=70&bkgnd=transparent&resp=png&angle=60",
+          brand: "BMW",
+          logo: "https://pngimg.com/uploads/bmw_logo/bmw_logo_PNG19707.png",
+          images: [
+            "https://cut-images.roadster.com/evox/color_640_001_png/55222/55222_cc640_001_300.png",
+            "https://cache.bmwusa.com/cosy.arox?pov=walkaround&brand=WBBM&vehicle=255E&client=byo&paint=P0300&fabric=FKTSW&sa=S02TE,S0302,S0316,S0319,S0322,S03GB,S03M1,S0402,S043L,S0459,S0494,S04FL,S04UR,S05AS,S05DM,S0674,S06AC,S06AK,S06C4,S06NX,S0704,S0710,S0760,S0775,S09T1,S09T2,S09TA&quality=70&bkgnd=transparent&resp=png&angle=220&w=9800&h=8000&x=100&y=1100",
+            "https://cache.bmwusa.com/cosy.arox?pov=walkaround&brand=WBBM&vehicle=255E&client=byo&paint=P0300&fabric=FKTSW&sa=S02TE,S0302,S0316,S0319,S0322,S03GB,S03M1,S0402,S043L,S0459,S0494,S04FL,S04UR,S05AS,S05DM,S0674,S06AC,S06AK,S06C4,S06NX,S0704,S0710,S0760,S0775,S09T1,S09T2,S09TA&quality=70&bkgnd=transparent&resp=png&angle=270&w=9800&h=8000&x=100&y=900",
+          ],
+        },
+        {
+          car: "https://mediaservice.audi.com/media/fast/H4sIAAAAAAAA_1vzloG1tIiBOTrayfuvpGh6-m1zJgaGigIGBgZGoDhTtNOaz-I_2DhCHsCEtzEwF-SlMwJZKUycmbmJ6an6QD4_I3taTmV-aUkxO0grT-CmTb9qYsOWhue_imCNSvOqOLmGm4EVqItxB5BgngIk-MKBBKcdA5gEmbcTRFSC-Ez2zAwMrBVARiQDCPDxlRblFCQWJebqlWemlGQIahgQCYTZXVxDHD19ggG4bb1C6QAAAA",
+          brand: "Audi",
+          logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Audi_logo_detail.svg/1280px-Audi_logo_detail.svg.png",
+          images: [
+            "https://uploads.audi-mediacenter.com/system/production/cars/909/photos/a49047c3172834345e587362a509dd217177b76c/web_1440_A6_Sportback_e-tron.png?1722420758",
+            "https://www.valleiautogroep.nl/img/http/aHR0cHM6Ly93d3cudmFsbGVpYXV0b2dyb2VwLm5sL2Fzc2V0cy9tb2RlbHMvYXVkaS1hNi1lLXRyb24tYWxnZW1lZW4ucG5n/audi-a6-e-tron-algemeen.png?fm=webp&s=3629e94ae1801ddd7a6266809581f8ea",
+            "https://cdn.drivek.com/configurator-icon/cars/it/800/AUDI/A6-E-TRON/48693_HATCHBACK-5-DOORS/audi-a6-sb-etron-side-view.png",
+          ],
+        },
+        {
+          car: "https://qa.mercedes-benz.co.id/media/jleplqth/cla-200-amg-line_available-models_554-x-369.png",
+          brand: "Mercedes",
+          logo: "https://logolook.net/wp-content/uploads/2022/05/Mercedes-Benz-Logo.png",
+          images: [
+            "https://www.mercedes-benz.co.id/media/jleplqth/cla-200-amg-line_available-models_554-x-369.png",
+            "https://img.sm360.ca/ir/w640h333c/images/newcar/ca/2025/mercedes-benz/classe-c-berline/c-300-4matic/sedan/exteriorColors/2023_mercedes-benz_wip_classe-c-berline_c-300-4matic_014_149.png",
+            "https://www.mercedes-benz.com.sg/content/dam/hq/passengercars/cars/cla/cla-coupe-c118-fl-pi/modeloverview/01-2023/images/mercedes-amg-cla-coupe-c118-modeloverview-696x392-12-2022.png",
+          ],
+        },
+        {
+          car: "https://dev-goweb-assets.s3-ap-south-1.amazonaws.com/png/66739d1eba2ece4799b2c2ea/tang-driver-quarter-snowy-white-74f250-17c9a3.png",
+          brand: "BYD",
+          logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/BYD_Auto_2022_logo.svg/2560px-BYD_Auto_2022_logo.svg.png",
+          images: [
+            "https://elbiladmin.b-cdn.net/wp-content/uploads/Byd-Tang-side-2024.png?width=820&height=461",
+            "https://www.carsized.com/resources/byd/seal/d/2022/ra_261000000_byd-seal-2022-rear-view_4x.png",
+            "https://static.wixstatic.com/media/80e573_1536b015820a4327923a89d2acf11f2c~mv2.png/v1/fill/w_572,h_348,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/byd%20atto%203%20white.png",
+          ],
+        },
+      ];
+
+      for (let i = 0; i < cars.length; i++) {
+        const img = document.createElement("img");
+        img.src = cars[i].car;
+        img.width = 500;
+        img.addEventListener("click", () => {
+          displayCarInfo(cars[i]);
+        });
+        div.appendChild(img);
+      }
+
+      function displayCarInfo(car) {
+        info.innerHTML = `
+        <img
+        src="${car.logo}"
+        width="100"
+        alt=""
+      />
+      <h1>${car.brand}</h1>`;
+
+        const images = document.createElement("div");
+        images.classList.add("interrior");
+
+        for (let i = 0; i < car.images.length; i++) {
+          const img = document.createElement("img");
+          img.src = car.images[i];
+          img.width = 300;
+          images.appendChild(img);
+        }
+
+        info.appendChild(images);
+      }
+    </script>
+  </body>
+</html>
